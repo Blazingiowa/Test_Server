@@ -11,10 +11,11 @@ import javax.websocket.server.ServerEndpoint;
 @ServerEndpoint("/WebSocketServer")
 public class WebSocket
 {
+
 	@OnOpen
     public void onOpen(Session session) {
         /* セッション確立時の処理 */
-        System.out.println("WebSocketセッション確立");
+		System.out.println(session.getId() + " was connected.");
     }
 
     @OnMessage
